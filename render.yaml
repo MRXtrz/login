@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fastapi-sqlite
+    env: python
+    plan: free
+    branch: main  # ветка твоего репозитория
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    disk: 1GB  # persistent disk

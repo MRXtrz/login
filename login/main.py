@@ -11,8 +11,8 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
+DATABASE_URL = "sqlite:///./login/db/users.db"
 
-DATABASE_URL = "sqlite:///./db/users.db"
 
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 Base = declarative_base()
